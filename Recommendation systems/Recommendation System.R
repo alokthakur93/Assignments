@@ -31,7 +31,7 @@ as(book_recommended_items1, "list")
 
 #User Based Collaborative Filtering
 
-book_recomm_model2 <- Recommender(book_rate_data_matrix,method="IBCF")
+book_recomm_model2 <- Recommender(book_rate_data_matrix,method="UBCF")
 
 #Predictions for two users 
 book_recommended_items2 <- predict(book_recomm_model2,book_rate_data_matrix[21:22], n=5)
