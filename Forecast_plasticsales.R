@@ -18,8 +18,8 @@ plot(train)
 #########Using Holtwinters function###################
 hw_a <- HoltWinters(train,alpha = 0.2,beta = F,gamma = F)
 hw_a
-hwa_pred <- forecast(hw_alpha)
-hwa_pred<-data.frame(predict(hw_alpha,n.ahead=12))  
+hwa_pred <- forecast(hw_a)
+hwa_pred<-data.frame(predict(hw_a,n.ahead=12))  
 plot(forecast(hw_a,h=12))
 hwa_mape<-MAPE(hwa_pred$fit,test)*100
 hwa_mape  
