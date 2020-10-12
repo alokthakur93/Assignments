@@ -99,7 +99,7 @@ wordcloud2(words1, size=0.5, shape='circle')
 wordcloud2(words1, size=0.5, shape = 'triangle')
 
 #####Emotion mining
-
+library(syuzhet)
 tweetdata <- read.csv(file.choose(), header = TRUE)
 tweets <- as.character(tweetdata$text)
 class(tweets)
